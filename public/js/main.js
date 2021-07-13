@@ -17,15 +17,15 @@
   });
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
-  var scrolltoOffset = $('#header').outerHeight() - 2;
-  $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
+  var scrolltoOffset = $('.header').outerHeight() - 2;
+  $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto, nav-link', function(e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       if (target.length) {
         e.preventDefault();
 
         var scrollto = target.offset().top - scrolltoOffset;
-        if ($(this).attr("href") == '#header') {
+        if ($(this).attr("href") == '.header') {
           scrollto = 0;
         }
 
@@ -33,7 +33,7 @@
           scrollTop: scrollto
         }, 1500, 'easeInOutExpo');
 
-        if ($(this).parents('.nav-menu, .mobile-nav').length) {
+        if ($(this).parents('.nav-menu, .mobile-nav, nav-item').length) {
           $('.nav-menu .active, .mobile-nav .active').removeClass('active');
           $(this).closest('li').addClass('active');
         }
@@ -149,37 +149,37 @@
   });
 
   // Skills section
-  $('.skills-content').waypoint(function() {
-    $('.progress .progress-bar').each(function() {
-      $(this).css("width", $(this).attr("aria-valuenow") + '%');
-    });
-  }, {
-    offset: '80%'
-  });
+  // $('.skills-content').waypoint(function() {
+  //   $('.progress .progress-bar').each(function() {
+  //     $(this).css("width", $(this).attr("aria-valuenow") + '%');
+  //   });
+  // }, {
+  //   offset: '80%'
+  // });
 
   // Porfolio isotope and filter
-  $(window).on('load', function() {
-    var portfolioIsotope = $('.portfolio-container').isotope({
-      itemSelector: '.portfolio-item'
-    });
+  // $(window).on('load', function() {
+  //   var portfolioIsotope = $('.portfolio-container').isotope({
+  //     itemSelector: '.portfolio-item'
+  //   });
 
-    $('#portfolio-flters li').on('click', function() {
-      $("#portfolio-flters li").removeClass('filter-active');
-      $(this).addClass('filter-active');
+  //   $('#portfolio-flters li').on('click', function() {
+  //     $("#portfolio-flters li").removeClass('filter-active');
+  //     $(this).addClass('filter-active');
 
-      portfolioIsotope.isotope({
-        filter: $(this).data('filter')
-      });
-      aos_init();
-    });
+  //     portfolioIsotope.isotope({
+  //       filter: $(this).data('filter')
+  //     });
+  //     aos_init();
+  //   });
 
-    // Initiate venobox (lightbox feature used in portofilo)
-    $(document).ready(function() {
-      $('.venobox').venobox({
-        'share': false
-      });
-    });
-  });
+  //   // Initiate venobox (lightbox feature used in portofilo)
+  //   $(document).ready(function() {
+  //     $('.venobox').venobox({
+  //       'share': false
+  //     });
+  //   });
+  // });
 
   // Init AOS
   function aos_init() {
@@ -215,47 +215,41 @@
   });
 
   // Newsletter
-  $("#newsletterForm").submit(function(e) {
+  $("#subscribeForm").submit(function(e) {
     e.preventDefault();
 
-    var url = $(this).attr("action");
-    var type = $(this).attr("method");
-    var data = $(this).serialize();
+    const form = $(this);
+    const data = $(this).serialize();
+    const url = $(this).attr("action");
 
-    $.ajax({
-      url: url,
-      type: type,
-      data: data,
-      success: function(response) {
-        if(response['error'])
-          swal("", response['message'], 'info');
-        else
-          swal("", response['message'], 'success');
-      },
-      error: function(err) {
-        swal("", "Operation not Successful", 'error');
-        console.log(err);
-      }
+    axios.post(url, data).then(response => {
+      alert(response.data.message);
+      $(form).trigger('reset');
+    }).catch(e => {
+
     });
   });
 
   // Carousel
-  $(".owl-carousel").owlCarousel({
+  $(".testimonials").owlCarousel({
     autoplay: true,
     dots: true,
     margin: 10,
+    responsiveClass:true,
     responsive:{
         0:{
-            items: 1
+            items:1,
+            nav:true
         },
         600:{
-            items: 4
+            items:1,
+            nav:false
         },
         1000:{
-            items: 4
+            items:1,
+            nav:true,
+            loop:false
         }
     }
   });
-
-
 })(jQuery);

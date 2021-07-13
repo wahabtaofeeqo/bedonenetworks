@@ -1,283 +1,180 @@
-<!DOCTYPE html>
-<html>
-<head>
+@extends('layouts.app')
 
-	<meta charset="utf-8">
-  	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Be Done Networks| Buy Bitcoin, Gifcard exchange made easy!</title>
+@section('content')
 
-	@include("partials.cssFiles")
-</head>
-<body>
+  <div class="header">
 
-	@include("partials.header")
-
-	<main id="main">
-    <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>About Us</h2>
-        </div>
-
-        <div class="row content">
-          <div class="col-lg-6">
-            <p>
-             <strong>Be Done Networks</strong> is a platform that enables customers to convert their bitcoins to preferred local currency. What will do mainly are:
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Bitcoin Exchange</li>
-              <li><i class="ri-check-double-line"></i> Giftcard Exchange</li>
-              <li><i class="ri-check-double-line"></i> All crypto coins</li>
-            </ul>
+    <div class="p-1 bg-light d-none d-md-block side-cap">
+      <div class="media" style="align-items: center;">
+          <i class="icofont-ui-dial-phone mr-2" style="font-size: 35px;"></i>
+          <div class="media-body pr-3">
+            <small class="py-0">More Information call us</small> <br class="mb-0 pb-0">
+            <span class="small py-0 text-color font-weight-bold" style="font-size: 14px;">+234-07036974316</span>
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-             	Customers can however sell their bitcoins and have money from the sales of the btc sent to their bank account.
-				      Banks don’t support bitcoin but we offer a secure medium of exchange where bitcoins would be exchanged with local currency.
-            </p>
-            <a href="#contact" class="btn-learn-more">Contact Us</a>
-          </div>
-        </div>
-
       </div>
-    </section><!-- End About Us Section -->
+    </div>
 
-    <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us section-bg">
-      <div class="container-fluid" data-aos="fade-up">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
+      <div class="container-fluid">
 
-        <div class="row">
+        <a class="navbar-brand" href="#">
+          <img src="/assets/bh.png" alt="" width="60" height="60">
+        </a>
 
-          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="content mb-4">
-              <h3>Bitcoin Exchange <strong>At ease</strong></h3>
-              <p class="">
-                Using <strong>Be Done Networks</strong> provides quite a lot benefits. Some of the key ones are:
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#rates">Rates</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testiomials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#page">Our Page</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="col-lg-5 ml-auto bg-white h-100 px-md-5 right-side">
+      <div class="text-right">
+        
+        <h1 class="mb-md-4">Better Solutions For 
+          <br><span data-aos="fade-up" data-aos-delay="200">Cryptocurrency</span></h1>
+
+        <p class="col-md-9 ml-auto px-0">
+          Specialits in Bitcoin, Giftcard e.t.c. <br>
+          Trade with <b class="text-color">Bedonenetworks</b> on Instagram, WhatsApp, Skype for safe Trading.
+        </p>
+      </div>
+
+      <div class="mt-5">
+          <a href="https://wa.me/2347036974316" class="btn btn-success py-2 px-md-5" data-aos="zoom-in" data-aos-delay="150">Whatsapp</a>
+          <a href="https://www.instagram.com/bedonenetworks_" class="btn btn-info py-2 px-md-5" data-aos="fade-up" data-aos-delay="200">Instagram</a>
+      </div>
+
+      <p style="position: absolute; bottom: 10px;" class="text-color font-weight-bold"> #Bedondey4u </p>
+    </div>
+  </div>
+
+  <div class="bg-bedon-info py-5" id="#about">
+    <div class="container py-5">
+       <h2 class="section-title">About Us</h2>
+      <div class="row text-white">
+        <div class="col-md-6">
+          <p class="">
+            <strong>Be Done Networks</strong> is a platform that enables customers to convert their bitcoins to preferred local currency. What will do mainly are:
+          </p>
+
+          <ul class="" style="list-style: none; padding-left: 0; margin-left: 0;">
+            <li><i class="ri-check-double-line"></i> All crypto coins</li>
+             <li><i class="ri-check-double-line"></i> Bitcoin Exchange</li>
+            <li><i class="ri-check-double-line"></i> iTunes, Amazon, Google play, Ebay, Sephora, Nordstorm, Steam, Walmart and more.</li>
+          </ul>
+        </div>
+
+        <div class="col-md-6">
+          <p>
+            Customers can however sell their bitcoins and have money from the sales of the btc sent to their bank account. Banks don’t support bitcoin but we offer a secure medium of exchange where bitcoins would be exchanged with local currency.
+          </p>
+
+          <a href="#page" class="btn btn-outline-light mt-4 px-5" data-aos="zoom-in" data-aos-delay="150">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="bg-light py-5">
+    <div class="container">
+      <h3 class="text-color mb-5">Crypto Exchange <strong>At ease</strong></h3>
+
+      <div class="row">
+        <div class="col-md-7 about">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title text-color-info">01 Ease Access</h5>
+              <p class="mb-0">
+                Our service has been designed such that it becomes very easy for potential client and user to find it very convinience.
               </p>
             </div>
-
-            <div class="accordion-list">
-               <ul>
-                <li>
-                  	<a data-toggle="" class="" href="#">
-                  		<span>01</span> Ease of Access </a>
-                  	<div class="" data-parent="">
-                    	<p>
-                      	Our service has been designed such that it becomes very easy for potential client and user to find it very convinience.
-                    	</p>
-                  	</div>
-                </li>
-
-                <li>
-                  <a href="#">
-                  	<span>02</span> Good Rate </a>
-                  <div id="accordion-list-2" data-parent=".accordion-list">
-                    <p>
-                      The rate of our exchange for all cryptocurrency related busness is of high quality and that is our market strategy.
-                    </p>
-                  </div>
-                </li>
-
-                <li>
-                  	<a href="#">
-                  		<span>03</span> Fast Payment </a>
-                  	
-                  		
-                  	<div id="accordion-list-3" data-parent=".accordion-list">
-                    	<p>
-                    		Our payment is termed <strong>Pay As You Go</strong> which means no delay at all. Once the business is done, you get the alert.
-                    	</p>
-                  	</div>
-                </li>
-
-              </ul>
-            </div>
-
           </div>
 
-          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/bh.png");' data-aos="zoom-in" data-aos-delay="150">
-          	
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Why Us Section -->
-
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-          <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-            <h3 class="mb-4 text-center-md">Market Today</h3>
-
-            <div class="card table-responsive" style="border-left: none; border-right: none; border-bottom: none;">
-            	<table class="table table-striped">
-            	<thead>
-            		<tr>
-            			<th>#</th>
-            			<th>Name</th>
-            			<th>Symbol</th>
-            			<th>Price</th>
-            			<th>Market Cap</th>
-            			<th>Total Volume</th>
-            		</tr>
-            	</thead>
-            	<tbody>
-       
-            		@foreach($data as $key => $row) 
-            			<tr>
-            				<td>
-            					{{$key + 1}}
-            				</td>
-            				<td>
-            					<img src="{{$row['image']}}" style="height: 35px; height: 35px;">
-            					<span class="px-4">
-            						{{$row['name']}}
-            					</span>
-            				</td>
-
-            				<td class="text-uppercase">
-            					{{$row['symbol']}}
-            				</td>
-
-            				<td>
-            					${{$row['current_price']}}
-            				</td>
-
-            				<td>
-            					${{$row['market_cap']}}
-            				</td>
-
-            				<td>
-            					${{$row['total_volume']}}
-            				</td>
-            			</tr>
-
-            			<?php if ($key == 10): ?>
-            				<?php break ?>
-            			<?php endif ?>
-            		@endforeach
-            	</tbody>
-            </table>
+          <div class="card mb-3"  data-aos="fade-down" data-aos-delay="150">
+            <div class="card-body">
+              <h5 class="card-title text-color-info">02 Good Rate</h5>
+              <p class="mb-0">
+                The rate of our exchange for all cryptocurrency related busness is of high quality and that is our market strategy.
+              </p>
             </div>
           </div>
-        </div>
 
-      </div>
-    </section><!-- End Skills Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="testimonials" class="services section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>What People say about us</h2>
-          <p>
-          	From our ever growing customer satisfaction, we have be able to gain trust of some of our potential customers. <strong>Give Us A Try</strong>
-          </p>
-        </div>
-
-        <div class="owl-carousel col-12 text-center">
-
-          <?php if (isset($testimonials) && !empty($testimonials)): ?>
-            @foreach($testimonials as $row) 
-              <div class="" data-aos="zoom-in" data-aos-delay="100">
-                <div class="icon-box" style="overflow-x: hidden;">
-                  <h4><a href="">{{$row['name']}}</a></h4>
-                  <blockquote style="font-style: italic;">
-                    {{$row['content']}}
-                  </blockquote>
-                </div>
-              </div>
-            @endforeach
-          <?php endif ?>
-
-        </div>
-
-        <div class="row d-none">
-          
-        
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
- 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>
-          	Our business center is open 24/7 to serve you better. Use The contact info and Get to us.
-          </p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="icofont-google-map"></i>
-                <h4>Location:</h4>
-                <p>Available at your request</p>
-              </div>
-
-              <div class="email">
-                <i class="icofont-envelope"></i>
-                <h4>Email:</h4>
-                <p>belloalaba6@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="icofont-phone"></i>
-                <h4>Call:</h4>
-                <p>+234 8020833029</p>
-              </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-color-info">03 Fast Payment</h5>
+              <p class="mb-0">
+                Our payment is termed <b>Pay As You Go</b> which means no delay at all. Once the business is done, you get the alert.
+              </p>
             </div>
-
           </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="contact" method="POST" role="form" class="php-email-form" id="contactForm">
-            	@csrf   
-              <div class="form-group">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" required="" name="email"/>
-              </div>
-
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" required="" rows="10"></textarea>
-              </div>
-
-              <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-
-              <div class="text-center">
-                <button type="submit">Send Message</button>
-              </div>
-
-            </form>
-          </div>
-
+         
         </div>
 
+        <div class="col-md-5 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="150" style='background: url("/assets/bh.png"); background-size: cover;'>
+            
+        </div>
       </div>
-    </section><!-- End Contact Section -->
+    </div>
+  </div>
 
-  	</main><!-- End #main -->
+  <div class="py-5 bg-bedon-info" id="rates">
+    <crypto-market></crypto-market>
+  </div>
 
-  	@include("partials.footer")
+  <div class="py-5 bg-white" id="page">
+    <h4 class="section-title">#Bedondey4u</h4>
+    <bedone></bedone>
+  </div>
 
-	@include("partials.jsFiles")
-</body>
-</html>
+  <div class="bg-light py-5" id="testimonials">
+    <div class="container py-2">
+      <h4 class="section-title">Testimonials</h4>
+
+       <div class="owl-carousel testimonials col-md-8 mx-auto text-center">
+          @foreach($testimonials as $key => $row)
+            <div>
+              <h4 class="text-color">{{ $row->name }}</h4>
+              <p style="font-style: italic;">
+                {{ $row->content }}
+              </p>
+          </div>
+          @endforeach
+      </div>
+
+      <div class="py-5 bg-bedon-info rounded">
+        <h2 class="text-white text-center my-3">Our newsletter</h2>
+        <form class="col-md-7 mx-auto mb4 subscribe" action="/api/subscribe" method="POST" id="subscribeForm" data-aos="zoom-in" data-aos-delay="100">
+          <div class="form-row">
+            <div class="form-group col-md-10">
+              <input type="email" name="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group col-md-2">
+              <button class="btn btn-info">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+@endsection

@@ -17,128 +17,43 @@ class MainController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
-
-        $client = new CoinGeckoClient();
-        $data = $client->coins()->getMarkets('usd');
-        $testimonials = Testimonials::all()->toArray();
-
-        return view('index', compact('data', 'testimonials'));
+        $testimonials = Testimonials::all();
+        return view('index', compact('testimonials'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create() {
-     
+    public function page($value='')
+    {
+        // code...
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request) {
-
-        $to = "taofeekolamilekan218@gmail.com";
-        $resource = "";
-        $error;
-
-        $email = $request->get("email");
-        $message = $request->get("message");
-
-        if (!empty($email) && !empty($message)) {
-            
-            $header = "From: $email";
-
-            try {
-                mail($to, "Hello", $message, $header);
-                $response = "Email sent. Thank you";
-            } catch (Exception $e) {
-                $response = "Email not sent: " . $e->getMessage();
-            }
-        }
-        else {
-
-            $response = "Email and Message must be provided";
+    public function rates()
+    {
+        $response = array('error' => false, 'message' => 'loaded', 'data' => []);
+        try {
+            $client = new CoinGeckoClient();
+            $data = $client->coins()->getMarkets('usd');
+            $response['data'] = $data;
+        } catch (Exception $e) {
+            $response['error'] = true;
         }
 
-        return $request->get("message");
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id) {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id) {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id) {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id) {
-        //
+        return response($response);
     }
 
     public function subscribe(Request $request) {
 
-        $response = array('error' => FAlSE);
-        $email = $request->get("email");
+        $response = array('error' => false, 'message' => 'Thank for subscribing!');
+        $email = $request->email;
 
-        if (!empty($email)) {
-            
-            $obj = new Newsletter;
-            
-            $check = $obj->where("email", $email);
+        $newsletter = Newsletter::where('email', $email)->first();
+        if (empty($newsletter)) {
+            Newsletter::create([
+                'email' => $email]);
 
-            if (!$check) {
-                $obj->email = $email;
-                $obj->save();
-
-                $response['error'] = FAlSE;
-                $response['message'] = "Subscribed. Thank You.";
-            }
-            else {
-
-                $response['error'] = TRUE;
-                $response['message'] = "Email already exist.";
-            }
-        }
-        else {
-
-            $response['error'] = TRUE;
-            $response['message'] = "Email not provided.";
+            return response($response);
         }
 
-        return $response;
+        $response['message'] = 'You already subscribed!';
+        return response($response);
     }
 }

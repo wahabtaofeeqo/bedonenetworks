@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/rates', 'MainController@rates');
+Route::post('/subscribe', 'MainController@subscribe');
+Route::get('/bedone-page', 'MainController@page');

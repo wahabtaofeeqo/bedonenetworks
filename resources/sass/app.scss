@@ -1,1 +1,145 @@
-//
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.header {
+	height: 650px;
+	background: url('/assets/bitcoin.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+	.nav-item .nav-link {
+		font-size: 15px;
+  		letter-spacing: 0.5px;
+  		padding-right: 16px;
+  		padding-left: 16px;
+  		font-weight: 500;
+  		font-family: "Open Sans", sans-serif;
+	}
+
+	.nav-item a.active {
+		background: #47b2e4;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		border-radius: 10px;
+		color: #fff !important;
+	}
+
+	.right-side {
+		border-top-left-radius: 300px; 
+		display: flex; 
+		flex-direction: column; 
+		justify-content: center;
+
+		h1 {
+			font-size: 3rem; 
+			font-style: italic; 
+			color: blue; 
+			font-weight: bold;
+
+			span {
+				color: #37517e;
+			}
+		}
+
+		@media (max-width: 600px) {
+			h1 {
+				font-size: 2rem
+			}
+		}
+
+		p {
+			font-size: 15px;
+		}
+	}
+
+	@media (max-width: 600px) {
+		height: 550px;	
+	}
+}
+
+.subscribe {
+	.form-control {
+		padding-top: 25px; 
+		padding-bottom: 25px;
+	}
+
+	.btn {
+		padding: 13px 25px;
+	}
+}
+
+.hashtag {
+	font-size: 24px; 
+	font-weight: bold;
+	color: $text-color
+}
+
+.text-color {
+	color: $text-color;
+}
+
+.text-color-info {
+	color: #47b2e4;
+}
+
+.btn-get-started {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 11px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px 0 0 0;
+  color: #fff;
+  background: #47b2e4;
+}
+
+.btn-get-started:hover {
+  background: #209dd8;
+}
+
+.section-title {
+	font-size: 32px;
+  	font-weight: bold;
+  	text-transform: uppercase;
+  	margin-bottom: 20px;
+  	padding-bottom: 20px;
+  	position: relative;
+  	color: $text-color
+}
+
+.bg-bedon-info {
+	background: $text-color;
+
+	.section-title {
+		color: #FFFFFF;
+	}
+}
+
+.about .card {
+	border-color: #FFF; 
+	border-radius: 10px;
+}
+
+.subscribe input {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.side-cap {
+	position: absolute; 
+	left: 0; 
+	top: 450px; 
+	z-index: 99; 
+	border-top-right-radius: 30px; 
+	border-bottom-right-radius: 30px; 
+	font-size: 14px;
+}
