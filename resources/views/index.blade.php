@@ -60,15 +60,15 @@
       </div>
 
       <div class="mt-5">
-          <a href="https://wa.me/2347036974316" class="btn btn-success py-2 px-md-5" data-aos="zoom-in" data-aos-delay="150">Whatsapp</a>
-          <a href="https://www.instagram.com/bedonenetworks_" class="btn btn-info py-2 px-md-5" data-aos="fade-up" data-aos-delay="200">Instagram</a>
+          <a href="https://wa.me/2347036974316" class="btn btn-success btn-lg px-md-5" data-aos="zoom-in" data-aos-delay="150">Whatsapp</a>
+          <a href="https://www.instagram.com/bedonenetworks_" class="btn btn-primary btn-lg px-md-5" data-aos="fade-up" data-aos-delay="200">Instagram</a>
       </div>
 
       <p style="position: absolute; bottom: 10px;" class="text-color font-weight-bold"> #Bedondey4u </p>
     </div>
   </div>
 
-  <div class="bg-bedon-info py-5" id="#about">
+  <div class="bg-bedon-info py-5" id="about">
     <div class="container py-5">
        <h2 class="section-title">About Us</h2>
       <div class="row text-white">
