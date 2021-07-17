@@ -17,8 +17,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
       <div class="container-fluid">
 
-        <a class="navbar-brand" href="#">
-          <img src="/assets/bh.png" alt="" width="60" height="60">
+        <a class="navbar-brand" href="/" style="color: blue;">
+          <img src="/assets/bh.png" alt="" width="60" height="60"> <strong>Bedonenetworks</strong>
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

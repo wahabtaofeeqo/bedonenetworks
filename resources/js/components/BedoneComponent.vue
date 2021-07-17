@@ -77,7 +77,7 @@
         components: { slide },
         data() {
             return {
-                email: 'belloalaba6@gmail.com',
+                email: 'bedonenetworks@gmail.com',
                 phone: '+234 7036974316',
                 medias: []
             }
